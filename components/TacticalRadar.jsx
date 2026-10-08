@@ -305,7 +305,7 @@ export default function TacticalRadar() {
         </div>
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1.15fr) minmax(0, 1.35fr)', gap: '2rem', alignItems: 'start' }}>
+      <div className="sim-radar-grid">
         {/* Left Column: Sweeping Doppler Radar Canvas */}
         <div style={{ background: '#060a12', borderRadius: '12px', border: '1px solid var(--border-medium)', padding: '1.25rem', textAlign: 'center', position: 'relative' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.72rem', fontFamily: 'var(--font-mono)', color: 'var(--text-muted)', marginBottom: '0.75rem' }}>
@@ -392,7 +392,7 @@ export default function TacticalRadar() {
               Adversary Kill-Chain Progression:
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '0.5rem', marginBottom: '0.85rem' }}>
+            <div className="sim-metrics-quad" style={{ gap: '0.5rem', marginBottom: '0.85rem' }}>
               {selectedTarget.killChain.map((step, idx) => (
                 <div
                   key={idx}

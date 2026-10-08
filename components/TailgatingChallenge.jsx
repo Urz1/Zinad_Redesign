@@ -429,7 +429,7 @@ export default function TailgatingChallenge() {
         })}
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: '2.5rem', alignItems: 'start' }}>
+      <div className="sim-tailgating-grid">
         {/* Three.js WebGL Viewport with CCTV Digital HUD */}
         <div style={{ background: '#080c16', border: '1px solid var(--border-subtle)', borderRadius: '12px', overflow: 'hidden', position: 'relative' }}>
           {/* Top CCTV Overlay */}
@@ -593,7 +593,7 @@ export default function TailgatingChallenge() {
                 </div>
               </div>
 
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem', marginBottom: '0.5rem' }}>
+              <div className="sim-cards-dual" style={{ marginBottom: '0.5rem' }}>
                 <div style={{ background: 'rgba(0,0,0,0.3)', padding: '0.6rem', borderRadius: '4px' }}>
                   <div style={{ color: 'var(--text-muted)', fontSize: '0.68rem' }}>RFID PACS VERDICT:</div>
                   <div style={{ color: scenario.credentialDetails.badgeFound ? '#f59e0b' : '#ef4444', fontWeight: 800 }}>

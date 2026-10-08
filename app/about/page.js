@@ -215,7 +215,7 @@ export default function AboutPage() {
       <section className="section" style={{ background: 'var(--bg-dark-surface)', borderTop: '1px solid var(--border-subtle)' }}>
         <div className="container">
           <div className="glass-panel" style={{ padding: '3rem', border: '1px solid rgba(139, 92, 246, 0.3)', background: 'linear-gradient(135deg, rgba(139, 92, 246, 0.06), rgba(225, 29, 72, 0.06))' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1.1fr 0.9fr', gap: '2.5rem', alignItems: 'center' }}>
+            <div className="responsive-split-grid">
               <div>
                 <span className="section-tag" style={{ background: 'rgba(139, 92, 246, 0.15)', color: 'var(--accent-purple)' }}>
                   University &amp; Talent Empowerment

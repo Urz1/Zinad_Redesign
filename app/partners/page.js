@@ -452,7 +452,7 @@ export default function PartnersPage() {
       <section className="section">
         <div className="container">
           <div className="glass-panel" style={{ padding: '3rem', border: '1px solid rgba(6, 182, 212, 0.3)', background: 'linear-gradient(135deg, rgba(6, 182, 212, 0.05), rgba(139, 92, 246, 0.05))' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: '3rem', alignItems: 'center' }}>
+            <div className="responsive-split-grid">
               <div>
                 <span className="section-tag" style={{ background: 'rgba(6, 182, 212, 0.15)', color: 'var(--accent-cyan)' }}>
                   Executive Tour 2025

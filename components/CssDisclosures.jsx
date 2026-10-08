@@ -166,7 +166,7 @@ export default function CssDisclosures() {
             </div>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1.1fr) minmax(0, 1.25fr)', gap: '2rem' }}>
+          <div className="sim-cockpit-grid">
             {/* Left: CVE Dossier List */}
             <div>
               <h4 style={{ fontSize: '0.8rem', color: 'var(--text-muted)', fontFamily: 'var(--font-mono)', marginBottom: '0.75rem', textTransform: 'uppercase' }}>
@@ -263,7 +263,7 @@ export default function CssDisclosures() {
               </div>
 
               {/* Memory Heap Registers */}
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '0.5rem', marginBottom: '1rem' }}>
+              <div className="sim-metrics-quad" style={{ gap: '0.5rem', marginBottom: '1rem' }}>
                 {[
                   { reg: 'RAX', val: cve.memoryRegisters.rax },
                   { reg: 'RBX', val: cve.memoryRegisters.rbx },
@@ -328,7 +328,7 @@ uid=0(root) gid=0(root) groups=0(root)
             </div>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1.25rem' }}>
+          <div className="sim-metrics-quad" style={{ gap: '1.25rem' }}>
             {[
               { label: 'Attack Vector (AV)', val: cvssAV, setter: setCvssAV, options: [{ k: 'N', l: 'Network' }, { k: 'L', l: 'Local' }, { k: 'P', l: 'Physical' }] },
               { label: 'Attack Complexity (AC)', val: cvssAC, setter: setCvssAC, options: [{ k: 'L', l: 'Low' }, { k: 'H', l: 'High' }] },

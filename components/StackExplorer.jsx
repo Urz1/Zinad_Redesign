@@ -480,7 +480,7 @@ export default function StackExplorer() {
         </div>
 
         {/* 2-Column Balanced Workbench Body with Live Kinetic Bus Column */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'minmax(330px, 1.1fr) minmax(350px, 0.9fr)', gap: '1.75rem', alignItems: 'stretch' }}>
+        <div className="sim-stack-grid">
           
           {/* Left Column: Vertical Chassis Rack + Interactive Conduit + Cascade Trigger */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>

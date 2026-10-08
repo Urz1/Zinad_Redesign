@@ -221,7 +221,7 @@ export default function VenueExplorer() {
       </div>
 
       {/* Main Interactive Stage & Floor Plan Simulation Console */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1.15fr) minmax(0, 0.85fr)', gap: '1.75rem', alignItems: 'stretch' }}>
+      <div className="sim-cockpit-grid" style={{ alignItems: 'stretch' }}>
         {/* Left: Spatial 2.5D Isometric Architectural Blueprint */}
         <div style={{ background: 'var(--bg-dark-elevated)', borderRadius: '12px', border: '1px solid var(--border-medium)', padding: '1.5rem', position: 'relative', overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem', borderBottom: '1px solid rgba(255,255,255,0.06)', paddingBottom: '0.75rem' }}>
@@ -372,7 +372,7 @@ export default function VenueExplorer() {
                 </span>
               </div>
 
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.6rem', marginBottom: '1rem' }}>
+              <div className="sim-cards-dual" style={{ marginBottom: '1rem' }}>
                 {[
                   { id: 'soc', name: 'Internal SOC Booth', attendees: '42 nearby' },
                   { id: 'crowdstrike', name: 'Identity Threat Booth', attendees: '128 nearby' },

@@ -125,7 +125,7 @@ export default function SupportPage() {
                     <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 600, color: 'var(--text-secondary)', marginBottom: '0.4rem' }}>
                       SUBSYSTEM DISPATCH CATEGORY:
                     </label>
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem' }}>
+                    <div className="responsive-form-row" style={{ gap: '0.75rem' }}>
                       {[
                         { id: 'technical', label: 'ZiSoft SaaS & LMS Sync' },
                         { id: 'outlook', label: 'M365 Outlook Add-in' },
@@ -154,7 +154,7 @@ export default function SupportPage() {
                     </div>
                   </div>
 
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                  <div className="responsive-form-row">
                     <div>
                       <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 600, color: 'var(--text-secondary)', marginBottom: '0.4rem' }}>
                         CORPORATE EMAIL

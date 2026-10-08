@@ -463,7 +463,16 @@ export default function PhishingSandbox() {
         </div>
 
         {/* MAIN SANDBOX CHASSIS: DESKTOP vs SMARTPHONE */}
-        <div style={{ display: 'grid', gridTemplateColumns: deviceMode === 'mobile' ? 'minmax(320px, 420px) 1fr' : '1fr', gap: '1.75rem', alignItems: 'start', justifyContent: 'center' }}>
+        <div
+          className={deviceMode === 'mobile' ? 'sim-phishing-mobile-grid' : ''}
+          style={{
+            display: 'grid',
+            gridTemplateColumns: deviceMode === 'mobile' ? undefined : '1fr',
+            gap: '1.75rem',
+            alignItems: 'start',
+            justifyContent: 'center',
+          }}
+        >
 
           {/* DEVICE CONTAINER */}
           {deviceMode === 'desktop' ? (

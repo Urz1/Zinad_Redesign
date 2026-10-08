@@ -457,13 +457,13 @@ export default function ZisoftCommandCenter() {
           </div>
 
           {/* Dual-Column Interactive Arena */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1.15fr) minmax(0, 1.25fr)', gap: '2rem', alignItems: 'start' }}>
+          <div className="sim-cockpit-grid">
             {/* Left Column: Offensive Controls */}
             <div>
               <div style={{ fontSize: '0.76rem', fontFamily: 'var(--font-mono)', color: 'var(--text-muted)', textTransform: 'uppercase', marginBottom: '0.65rem' }}>
                 1. Select Advanced Threat Vector:
               </div>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.65rem', marginBottom: '1.25rem' }}>
+              <div className="sim-cards-dual" style={{ marginBottom: '1.25rem' }}>
                 {Object.entries(vectors).map(([key, vec]) => {
                   const isSel = selectedVector === key;
                   return (
@@ -506,7 +506,7 @@ export default function ZisoftCommandCenter() {
                   <span>2. TARGET PROFILE:</span>
                   <span style={{ color: 'var(--accent-crimson)', fontWeight: 700 }}>HIGH-VALUE CREDENTIAL</span>
                 </div>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '0.5rem' }}>
+                <div className="sim-metrics-triple" style={{ gap: '0.5rem' }}>
                   {[
                     { id: 'cfo', label: 'Chief Financial Officer', dept: 'Finance' },
                     { id: 'devops', label: 'Lead SRE Engineer', dept: 'Infrastructure' },
@@ -650,59 +650,61 @@ export default function ZisoftCommandCenter() {
                 <div style={{ fontSize: '0.7rem', fontFamily: 'var(--font-mono)', color: 'var(--text-muted)', textTransform: 'uppercase', marginBottom: '0.75rem' }}>
                   Interactive MITRE Attack Path Topology:
                 </div>
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', position: 'relative' }}>
-                  {[
-                    { step: '1. INGRESS', code: 'T1566.002', name: 'Spearphishing Link', status: attackPhase !== 'idle' ? 'red' : 'dim' },
-                    { step: '2. EXECUTION', code: 'T1204', name: 'User Interaction', status: attackPhase === 'intercepted' || attackPhase === 'contained' ? 'amber' : 'dim' },
-                    { step: '3. INTERCEPT', code: 'T1539', name: 'AiTM Proxy Catch', status: attackPhase === 'contained' ? 'severed' : 'dim' },
-                    { step: '4. CONTAINMENT', code: 'REFLEX-360', name: 'Session Token Flush', status: attackPhase === 'contained' ? 'emerald' : 'dim' },
-                  ].map((node, i) => (
-                    <div
-                      key={i}
-                      style={{
-                        zIndex: 2,
-                        textAlign: 'center',
-                        background:
-                          node.status === 'severed'
-                            ? 'rgba(225, 29, 72, 0.15)'
-                            : node.status === 'emerald'
-                            ? 'rgba(16, 185, 129, 0.15)'
-                            : node.status === 'red'
-                            ? 'rgba(239, 68, 68, 0.15)'
-                            : 'rgba(255, 255, 255, 0.04)',
-                        border: `1px solid ${
-                          node.status === 'severed'
-                            ? 'var(--accent-crimson)'
-                            : node.status === 'emerald'
-                            ? 'var(--accent-emerald)'
-                            : node.status === 'red'
-                            ? '#ef4444'
-                            : 'rgba(255, 255, 255, 0.1)'
-                        }`,
-                        borderRadius: '8px',
-                        padding: '0.5rem 0.65rem',
-                        minWidth: '85px',
-                        transition: 'all 0.3s ease',
-                      }}
-                    >
-                      <div style={{ fontSize: '0.62rem', fontFamily: 'var(--font-mono)', color: 'var(--text-muted)' }}>{node.step}</div>
-                      <div style={{ fontSize: '0.72rem', fontWeight: 800, color: '#f8fafc', margin: '0.1rem 0' }}>{node.code}</div>
+                <div className="sim-scroll-x">
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', position: 'relative', minWidth: '380px' }}>
+                    {[
+                      { step: '1. INGRESS', code: 'T1566.002', name: 'Spearphishing Link', status: attackPhase !== 'idle' ? 'red' : 'dim' },
+                      { step: '2. EXECUTION', code: 'T1204', name: 'User Interaction', status: attackPhase === 'intercepted' || attackPhase === 'contained' ? 'amber' : 'dim' },
+                      { step: '3. INTERCEPT', code: 'T1539', name: 'AiTM Proxy Catch', status: attackPhase === 'contained' ? 'severed' : 'dim' },
+                      { step: '4. CONTAINMENT', code: 'REFLEX-360', name: 'Session Token Flush', status: attackPhase === 'contained' ? 'emerald' : 'dim' },
+                    ].map((node, i) => (
                       <div
+                        key={i}
                         style={{
-                          fontSize: '0.6rem',
-                          fontFamily: 'var(--font-mono)',
-                          color:
+                          zIndex: 2,
+                          textAlign: 'center',
+                          background:
+                            node.status === 'severed'
+                              ? 'rgba(225, 29, 72, 0.15)'
+                              : node.status === 'emerald'
+                              ? 'rgba(16, 185, 129, 0.15)'
+                              : node.status === 'red'
+                              ? 'rgba(239, 68, 68, 0.15)'
+                              : 'rgba(255, 255, 255, 0.04)',
+                          border: `1px solid ${
                             node.status === 'severed'
                               ? 'var(--accent-crimson)'
                               : node.status === 'emerald'
                               ? 'var(--accent-emerald)'
-                              : 'var(--text-muted)',
+                              : node.status === 'red'
+                              ? '#ef4444'
+                              : 'rgba(255, 255, 255, 0.1)'
+                          }`,
+                          borderRadius: '8px',
+                          padding: '0.5rem 0.65rem',
+                          minWidth: '85px',
+                          transition: 'all 0.3s ease',
                         }}
                       >
-                        {node.status === 'severed' ? 'SEVERED' : node.status === 'emerald' ? 'QUARANTINED' : node.name}
+                        <div style={{ fontSize: '0.62rem', fontFamily: 'var(--font-mono)', color: 'var(--text-muted)' }}>{node.step}</div>
+                        <div style={{ fontSize: '0.72rem', fontWeight: 800, color: '#f8fafc', margin: '0.1rem 0' }}>{node.code}</div>
+                        <div
+                          style={{
+                            fontSize: '0.6rem',
+                            fontFamily: 'var(--font-mono)',
+                            color:
+                              node.status === 'severed'
+                                ? 'var(--accent-crimson)'
+                                : node.status === 'emerald'
+                                ? 'var(--accent-emerald)'
+                                : 'var(--text-muted)',
+                          }}
+                        >
+                          {node.status === 'severed' ? 'SEVERED' : node.status === 'emerald' ? 'QUARANTINED' : node.name}
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
               </div>
 
@@ -738,7 +740,7 @@ export default function ZisoftCommandCenter() {
           MODE 2: DEPARTMENTAL RISK HEATMAP
           ========================================================================= */}
       {activeMode === 'heatmap' && (
-        <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1.25fr)', gap: '2rem', alignItems: 'stretch' }}>
+        <div className="sim-cockpit-grid" style={{ alignItems: 'stretch' }}>
           {/* Department List & Score Selector */}
           <div>
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
@@ -827,7 +829,7 @@ export default function ZisoftCommandCenter() {
             </div>
 
             {/* Metrics Grid */}
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '0.75rem', marginBottom: '1.25rem' }}>
+            <div className="sim-metrics-triple" style={{ gap: '0.75rem', marginBottom: '1.25rem' }}>
               <div style={{ background: 'var(--bg-dark-surface)', padding: '0.75rem', borderRadius: '6px', border: '1px solid var(--border-subtle)' }}>
                 <div style={{ fontSize: '0.7rem', color: 'var(--text-muted)', fontFamily: 'var(--font-mono)' }}>HEADCOUNT</div>
                 <div style={{ fontSize: '1.1rem', fontWeight: 800, color: 'var(--text-primary)', marginTop: '0.2rem' }}>{currentDept.headcount}</div>
@@ -906,7 +908,7 @@ export default function ZisoftCommandCenter() {
           MODE 3: 1-CLICK INBOX SHREDDER (NATIVE CLIENT PARTICLES)
           ========================================================================= */}
       {activeMode === 'inbox' && (
-        <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1.3fr)', gap: '2rem', alignItems: 'start' }}>
+        <div className="sim-cockpit-grid">
           <div>
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
               <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: 'var(--accent-purple)' }} />
@@ -1132,7 +1134,7 @@ export default function ZisoftCommandCenter() {
           MODE 4: AUDIT COMPLIANCE CROSSWALK
           ========================================================================= */}
       {activeMode === 'compliance' && (
-        <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1.25fr) minmax(0, 0.95fr)', gap: '2rem' }}>
+        <div className="sim-cockpit-grid-wide">
           <div>
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
               <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: 'var(--accent-amber)' }} />
