@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evenue | Interactive Cybersecurity Virtual Summits | ZINAD</title>
+  <meta name="description" content="Evenue is the world's premier purpose-built virtual cybersecurity summit platform. Host immersive awareness days, live team CTFs, and automated CPE credits.">
+  <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/index.css">
+</head>
+<body>
+
+  <!-- Sticky Enterprise Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="logo-wrap">
+        <div class="logo-symbol">Z</div>
+        <div>
+          <span class="logo-text">ZINAD</span>
+          <span class="logo-tagline">Human Threat Intelligence</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="all-products.html" class="nav-link">Platform Architecture <span class="nav-badge">Stack</span></a></li>
+          <li><a href="product-zisoft.html" class="nav-link">ZiSoft AI</a></li>
+          <li><a href="zi-games-page.html" class="nav-link">ZIGAMES VR</a></li>
+          <li><a href="products-cybersecurity-awarness-campaigns.html" class="nav-link">Red Teaming</a></li>
+          <li><a href="product-css.html" class="nav-link">CSS Pentest</a></li>
+          <li><a href="product-evenue.html" class="nav-link active">Evenue Summit</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn btn-primary trigger-demo-modal">Book Live Demo</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Header -->
+  <section class="section" style="padding-bottom: 3.5rem;">
+    <div class="container text-center">
+      <div class="section-tag" style="background: rgba(6, 182, 212, 0.15); color: var(--accent-cyan);">
+        Experiential Event Platform
+      </div>
+      <h1 class="hero-title" style="max-width: 960px; margin: 0 auto 1.5rem;">
+        Turn Corporate Security Days into <span class="text-gradient">Immersive Virtual Summits.</span>
+      </h1>
+      <p class="section-subtitle" style="max-width: 760px; margin: 0 auto 2.5rem;">
+        The premier purpose-built cybersecurity event platform. Engage thousands of distributed employees with 3D animated halls, live keynote polling, team CTF tournaments, and automated CPE certification.
+      </p>
+
+      <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+        <button class="btn btn-primary trigger-demo-modal">Schedule 10-Minute Guided Virtual Tour</button>
+        <a href="#venue-tour" class="btn btn-secondary">Explore 3D Venue Spaces ❯</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3D Virtual Venue Interactive Explorer -->
+  <section id="venue-tour" class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="glass-panel" style="padding: 3rem; background: var(--bg-dark-surface);">
+        <div class="section-header" style="margin-bottom: 2.5rem;">
+          <span class="section-tag" style="color: var(--accent-cyan); border-color: rgba(6,182,212,0.3);">Virtual Floor Plan</span>
+          <h2 style="font-size: 2rem;">Explore the Evenue Virtual Venue</h2>
+          <p style="color: var(--text-secondary); font-size: 0.95rem;">
+            Click any venue space to preview how enterprise security teams host interactive summits for over 10,000 concurrent attendees.
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
+          <!-- Space 1: Grand Atrium -->
+          <div class="glass-panel card-hover" style="padding: 1.75rem; border-top: 3px solid var(--accent-cyan); cursor: pointer;" onclick="document.getElementById('space-desc').innerHTML='<h4 style=\'color:var(--accent-cyan);font-size:1.2rem;margin-bottom:0.5rem;\'>The Grand Atrium & Exhibition Lobby</h4><p style=\'color:#cbd5e1;font-size:0.9rem;line-height:1.6;\'>Customized corporate branding with animated attendee avatars, digital sponsor booths, and an interactive concierge guiding employees to scheduled cybersecurity sessions.</p>';">
+            <h4 style="font-size: 1.15rem; margin-bottom: 0.35rem;">1. Grand Atrium & Lobby</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Custom branding, attendee networking, sponsor pavilions.</p>
+          </div>
+
+          <!-- Space 2: Keynote Auditorium -->
+          <div class="glass-panel card-hover" style="padding: 1.75rem; border-top: 3px solid var(--accent-crimson); cursor: pointer;" onclick="document.getElementById('space-desc').innerHTML='<h4 style=\'color:var(--accent-crimson);font-size:1.2rem;margin-bottom:0.5rem;\'>Live Keynote Auditorium & Polling HUD</h4><p style=\'color:#cbd5e1;font-size:0.9rem;line-height:1.6;\'>Stream live executive broadcasts with integrated, anti-cheat security comprehension quizzes that track employee focus and reward participation points in real time.</p>';">
+            <h4 style="font-size: 1.15rem; margin-bottom: 0.35rem;">2. Keynote Auditorium</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Live broadcasts, interactive audience polling, Q&A.</p>
+          </div>
+
+          <!-- Space 3: CTF Arena -->
+          <div class="glass-panel card-hover" style="padding: 1.75rem; border-top: 3px solid var(--accent-emerald); cursor: pointer;" onclick="document.getElementById('space-desc').innerHTML='<h4 style=\'color:var(--accent-emerald);font-size:1.2rem;margin-bottom:0.5rem;\'>Team CTF & Hackathon Arena</h4><p style=\'color:#cbd5e1;font-size:0.9rem;line-height:1.6;\'>Host inter-departmental security tournaments where non-technical staff solve puzzle-based social engineering mysteries while engineers tackle defensive code reviews.</p>';">
+            <h4 style="font-size: 1.15rem; margin-bottom: 0.35rem;">3. Team CTF Arena</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Live departmental leaderboards & puzzle competitions.</p>
+          </div>
+
+          <!-- Space 4: Resource Pavilion -->
+          <div class="glass-panel card-hover" style="padding: 1.75rem; border-top: 3px solid var(--accent-purple); cursor: pointer;" onclick="document.getElementById('space-desc').innerHTML='<h4 style=\'color:var(--accent-purple);font-size:1.2rem;margin-bottom:0.5rem;\'>Resource Pavilion & CPE Certificates</h4><p style=\'color:#cbd5e1;font-size:0.9rem;line-height:1.6;\'>Automated issuance of verified continuing professional education (CPE/CEU) certificates upon attendance verification, with 1-click downloads for corporate security policies.</p>';">
+            <h4 style="font-size: 1.15rem; margin-bottom: 0.35rem;">4. Resource Pavilion</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Automated verified CPE certificates & document downloads.</p>
+          </div>
+        </div>
+
+        <div id="space-desc" style="background: #07090e; padding: 2rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); text-align: center;">
+          <h4 style="color: var(--accent-cyan); font-size: 1.2rem; margin-bottom: 0.5rem;">Select a Venue Space Above</h4>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">Click any of the 4 venue zones above to inspect its interactive cybersecurity mechanics.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Corporate Site Footer -->
+  <footer class="site-footer">
+    <div class="container text-center">
+      <p style="font-size: 0.9rem; color: var(--text-muted);">
+        © 2026 ZINAD Security Systems. All platform modules are ISO 27001:2022, SOC 2 Type II, and GDPR compliant.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

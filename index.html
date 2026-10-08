@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZINAD | AI-Powered Human Threat Intelligence & Cybersecurity Platform</title>
+  <meta name="description"
+    content="ZINAD transforms employees into active cyber sensors with AI-powered phishing simulations, real-time SOAR incident integration, and immersive VR training.">
+  <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/index.css">
+</head>
+
+<body>
+
+  <!-- Sticky Enterprise Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="logo-wrap">
+        <div class="logo-symbol">Z</div>
+        <div>
+          <span class="logo-text">ZINAD</span>
+          <span class="logo-tagline">Human Threat Intelligence</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="all-products.html" class="nav-link">Platform Architecture <span
+                class="nav-badge">Stack</span></a></li>
+          <li><a href="product-zisoft.html" class="nav-link">ZiSoft AI</a></li>
+          <li><a href="zi-games-page.html" class="nav-link">ZIGAMES VR</a></li>
+          <li><a href="products-cybersecurity-awarness-campaigns.html" class="nav-link">Red Teaming</a></li>
+          <li><a href="product-css.html" class="nav-link">CSS Pentest</a></li>
+          <li><a href="product-evenue.html" class="nav-link">Evenue Summit</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <div class="status-pill d-none-mobile">
+          <span class="hero-pill-status"></span>
+          <span>Threat Net: 99.98%</span>
+        </div>
+        <button class="btn btn-primary trigger-demo-modal">Book Live Demo</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section with 3D Spatial Canvas -->
+  <section class="section" style="padding-top: 3rem; padding-bottom: 4rem;">
+    <div class="container">
+      <div class="hero-split">
+        <div class="hero-content">
+          <div class="hero-badge-strip">
+            <div class="hero-pill">
+              <span class="hero-pill-status"></span>
+              <span>Gartner Peer Insights 4.8 ★</span>
+            </div>
+            <div class="hero-pill">
+              <span>SOC 2 Type II Certified</span>
+            </div>
+            <div class="hero-pill">
+              <span>NIST CSF 2.0 Aligned</span>
+            </div>
+          </div>
+
+          <h1 class="hero-title">
+            Stop Phishing at the <span class="text-gradient">Human Endpoint.</span>
+          </h1>
+
+          <p class="hero-description">
+            ZiSoft unites AI-personalized attack simulations with real-time incident response telemetry transforming
+            your workforce from a security liability into an active cyber defense sensor network.
+          </p>
+
+          <div class="hero-cta-group">
+            <button class="btn btn-primary trigger-demo-modal">
+              Request 1-on-1 Architecture Demo
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </button>
+            <a href="#interactive-sandbox" class="btn btn-secondary">
+              Try 60-Sec Sandbox
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
+              </svg>
+            </a>
+          </div>
+
+          <div class="hero-trust-metrics">
+            <div>
+              <div class="trust-metric-val text-emerald">78.4%</div>
+              <div class="trust-metric-label">Avg. Phish-Prone Reduction</div>
+            </div>
+            <div>
+              <div class="trust-metric-val" id="live-attacks-blocked">8,421,940</div>
+              <div class="trust-metric-label">Simulated Threats Neutralized</div>
+            </div>
+            <div>
+              <div class="trust-metric-val text-cyan">&lt; 1.5s</div>
+              <div class="trust-metric-label">ReflexAware SOAR Webhook SLA</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3D Three.js Threat Globe Canvas -->
+        <div class="hero-canvas-wrap">
+          <div class="canvas-overlay-hud">
+            <span class="hud-pill">HUMAN THREAT TELEMETRY: ACTIVE</span>
+            <span class="hud-pill">LIVE SENSORS: 1,800 NODES</span>
+          </div>
+          <div id="hero-threat-globe"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive 60-Second Phishing Inspection Sandbox -->
+  <section id="interactive-sandbox" class="section"
+    style="background: rgba(14, 18, 29, 0.5); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Interactive Sandbox</span>
+        <h2 class="section-title">Experience the Employee Detection Loop</h2>
+        <p class="section-subtitle">
+          Test your vigilance against an authentic spear-phishing lure. Inspect RFC 5322 headers, uncover homoglyph
+          spoofing, and trigger the ReflexAware 360 defense pipeline.
+        </p>
+      </div>
+
+      <div class="sandbox-wrapper">
+        <div class="sandbox-header">
+          <div class="sandbox-mac-dots">
+            <span class="mac-dot red"></span>
+            <span class="mac-dot yellow"></span>
+            <span class="mac-dot green"></span>
+          </div>
+          <span style="font-family: var(--font-mono); font-size: 0.85rem; color: #94a3b8;">ZiSoft Outlook Inbox Add-In
+            Simulator</span>
+          <span class="sandbox-badge">ATTACK IN PROGRESS</span>
+        </div>
+
+        <div class="sandbox-body">
+          <!-- Email Canvas -->
+          <div class="sandbox-email">
+            <div class="sandbox-email-meta">
+              <div class="meta-row">
+                <span class="meta-key">From:</span>
+                <span>DocuSign Automated Service &lt;<span class="meta-val-spoofed"
+                    title="Homoglyph Spoof: 0 instead of O">d0cusign-verify.net</span>&gt;</span>
+              </div>
+              <div class="meta-row">
+                <span class="meta-key">To:</span>
+                <span>sarah.connor@enterprise-client.com</span>
+              </div>
+              <div class="meta-row">
+                <span class="meta-key">Subject:</span>
+                <strong style="color: #0f172a;">URGENT: Completed Document Signatures Required - 2026 Executive
+                  Compensation</strong>
+              </div>
+            </div>
+
+            <div class="sandbox-email-content">
+              <div
+                style="background: #f8fafc; border: 1px dashed #cbd5e1; padding: 1.25rem; border-radius: 8px; margin-bottom: 1.25rem; text-align: center;">
+                <p style="font-size: 0.95rem; font-weight: 600; color: #1e293b; margin-bottom: 0.5rem;">Review Document
+                  via Secure Server</p>
+                <button
+                  style="background: #0284c7; color: white; padding: 0.6rem 1.4rem; border-radius: 6px; font-weight: 600; font-size: 0.88rem;"
+                  onclick="alert('In a real scenario, this malicious button links to a fake OAuth credential harvester. Instead, click \"
+                  Report with ZiSoft\" below to safely neutralize it!')">Review Document</button>
+              </div>
+              <p style="font-size: 0.8rem; color: #64748b;">
+                Security Note: This link expires in 45 minutes. If you did not request this agreement, report
+                immediately to your IT Security Operations team.
+              </p>
+            </div>
+
+            <!-- Expandable Raw Header Drawer -->
+            <div id="sandbox-header-drawer"
+              style="display: none; margin-top: 1rem; padding: 0.85rem; background: #0f172a; color: #38bdf8; border-radius: 6px; font-family: var(--font-mono); font-size: 0.75rem; overflow-x: auto;">
+              Received: from mail-relay.malicious-botnet.ru (185.220.101.44)<br>
+              Authentication-Results: dkim=fail; spf=SoftFail (IP does not match docusign.com)<br>
+              X-Mailer: Python/AsyncIO Exploitation Kit v4.2<br>
+              Return-Path: &lt;bounce@d0cusign-verify.net&gt;
+            </div>
+          </div>
+
+          <!-- Actions & Inspection Console -->
+          <div class="sandbox-actions">
+            <button id="btn-inspect-headers" class="btn btn-secondary" style="width: 100%;">
+              Inspect RFC 5322 Headers
+            </button>
+            <button id="btn-report-phish" class="btn btn-primary"
+              style="width: 100%; font-size: 1.05rem; padding: 1rem;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+              Report Suspicious Email with ZiSoft
+            </button>
+
+            <!-- Live Terminal Output -->
+            <div class="inspection-console">
+              <div>
+                <div
+                  style="color: var(--accent-cyan); font-weight: 600; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                  <span class="hero-pill-status"></span>
+                  <span>REFLEXAWARE 360 TELEMETRY STREAM</span>
+                </div>
+                <div id="sandbox-terminal-log" class="inspection-log">
+                  <div>[IDLE] Waiting for employee action...</div>
+                  <div>[INFO] Phishing vector: OAuth Device Code Phish</div>
+                  <div>[INFO] Homoglyph spoofing detected: <strong>d0cusign-verify.net</strong></div>
+                </div>
+              </div>
+
+              <!-- Success Notification Alert -->
+              <div id="sandbox-result" class="inspection-result"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Z-Bento Architecture Grid: 8 Core Modules -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Platform Modules</span>
+        <h2 class="section-title">The ZINAD Defense Architecture</h2>
+        <p class="section-subtitle">
+          Engineered to replace fragmented training tools with an integrated ecosystem bridging automated behavioral
+          nudges, kinetic simulations, and live red teaming.
+        </p>
+      </div>
+
+      <div class="bento-grid">
+        <!-- Bento 1: AI Personalization Engine (Col 8) -->
+        <div class="glass-panel card-hover bento-card bento-col-8">
+          <div>
+            <div class="bento-pill">
+              <span class="hero-pill-status"></span>
+              <span>Machine Learning Core</span>
+            </div>
+            <h3 class="bento-title">ZiSoft Adaptive Threat Personalization</h3>
+            <p class="bento-desc">
+              Leverages continuous neural modeling to evaluate departmental risk profiles, individual past
+              susceptibility, and active zero-day attack trends to automatically generate custom difficulty journeys.
+            </p>
+          </div>
+          <div class="bento-visual" style="display: flex; justify-content: space-between; align-items: center;">
+            <div style="font-family: var(--font-mono); font-size: 0.8rem;">
+              <span class="text-muted">Algorithm:</span> <span class="text-cyan">Reinforcement Risk Scoring
+                v3</span><br>
+              <span class="text-muted">Dynamic Lures:</span> <span class="text-emerald">QR Quishing, OAuth Consent,
+                Deepfake Voice</span>
+            </div>
+            <a href="product-zisoft.html" class="btn btn-secondary"
+              style="font-size: 0.85rem; padding: 0.5rem 1rem;">Explore ZiSoft ❯</a>
+          </div>
+        </div>
+
+        <!-- Bento 2: ZIGAMES Experiential Learning (Col 4) -->
+        <div class="glass-panel card-hover bento-card bento-col-4">
+          <div>
+            <div class="bento-pill">
+              <span style="color: var(--accent-purple);">Spatial Computing</span>
+            </div>
+            <h3 class="bento-title">ZIGAMES VR & WebGL</h3>
+            <p class="bento-desc">
+              Move beyond passive video lectures. Employees practice clean-desk inspections and tailgating
+              confrontations inside interactive 3D virtual spaces.
+            </p>
+          </div>
+          <div class="bento-visual" style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-purple);">Meta Quest 3 &
+              Vision Pro</span>
+            <a href="zi-games-page.html" class="btn btn-secondary"
+              style="font-size: 0.85rem; padding: 0.5rem 1rem;">View Games ❯</a>
+          </div>
+        </div>
+
+        <!-- Bento 3: Red Team Simulations (Col 4) -->
+        <div class="glass-panel card-hover bento-card bento-col-4">
+          <div>
+            <div class="bento-pill">
+              <span class="text-crimson">Offensive Security</span>
+            </div>
+            <h3 class="bento-title">Elite Red Teaming Campaigns</h3>
+            <p class="bento-desc">
+              Real-world tactical social engineering executed by certified consultants: spear-vishing audio clones,
+              rogue Wi-Fi AP beacons, and weaponized USB drops.
+            </p>
+          </div>
+          <div class="bento-visual">
+            <a href="products-cybersecurity-awarness-campaigns.html" class="btn btn-secondary"
+              style="width: 100%; font-size: 0.85rem;">View Red Team Scenarios ❯</a>
+          </div>
+        </div>
+
+        <!-- Bento 4: ReflexAware 360 (Col 4) -->
+        <div class="glass-panel card-hover bento-card bento-col-4">
+          <div>
+            <div class="bento-pill">
+              <span class="text-emerald">SecOps Automation</span>
+            </div>
+            <h3 class="bento-title">ReflexAware 360 SOAR Pipeline</h3>
+            <p class="bento-desc">
+              Bi-directional API hooks connect employee inbox reports directly to Splunk, Microsoft Sentinel, and Palo
+              Alto Networks for automated enterprise threat containment.
+            </p>
+          </div>
+          <div class="bento-visual">
+            <span style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--accent-emerald);">&lt; 1.5s
+              Automated Webhook Triage</span>
+          </div>
+        </div>
+
+        <!-- Bento 5: Evenue Summit & CSS Pentest (Col 4) -->
+        <div class="glass-panel card-hover bento-card bento-col-4">
+          <div>
+            <div class="bento-pill">
+              <span class="text-cyan">Summits & Pentesting</span>
+            </div>
+            <h3 class="bento-title">Evenue Summits & CSS</h3>
+            <p class="bento-desc">
+              Host high-impact virtual cybersecurity awareness weeks with live CTF arenas, paired with vetted
+              crowdsourced penetration testing.
+            </p>
+          </div>
+          <div class="bento-visual" style="display: flex; gap: 0.5rem;">
+            <a href="product-evenue.html" class="btn btn-secondary"
+              style="flex: 1; font-size: 0.8rem; padding: 0.4rem;">Evenue</a>
+            <a href="product-css.html" class="btn btn-secondary"
+              style="flex: 1; font-size: 0.8rem; padding: 0.4rem;">CSS Pentest</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Executive ROI & Risk Reduction Calculator -->
+  <section class="section" style="background: rgba(14, 18, 29, 0.4); border-top: 1px solid var(--border-subtle);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Executive Business Case</span>
+        <h2 class="section-title">Calculate Your Human Risk ROI</h2>
+        <p class="section-subtitle">
+          Benchmark estimated cost savings from avoided phishing breach incidents, reduced cyber insurance premiums, and
+          automated compliance hours.
+        </p>
+      </div>
+
+      <div class="calc-box">
+        <div>
+          <h3 style="font-size: 1.6rem; margin-bottom: 0.75rem;">Interactive Cost Reduction Model</h3>
+          <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 2rem;">
+            Drag the slider to match your enterprise employee headcount. Values derived from IBM Security & Ponemon
+            Institute empirical data breach metrics.
+          </p>
+
+          <div class="calc-slider-wrap">
+            <div class="calc-slider-label">
+              <span>Total Active Employees:</span>
+              <span id="roi-employee-count"
+                style="font-family: var(--font-mono); font-size: 1.25rem; color: var(--accent-crimson);">2,500</span>
+            </div>
+            <input type="range" id="roi-employee-slider" min="100" max="25000" step="100" value="2500"
+              class="slider-input">
+            <div
+              style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-muted); margin-top: 0.5rem; font-family: var(--font-mono);">
+              <span>100 Users</span>
+              <span>10,000 Users</span>
+              <span>25,000+ Users</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="calc-metrics-grid">
+          <div class="calc-metric-card">
+            <div id="roi-savings-amount" class="calc-metric-number">$273,000</div>
+            <div style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.5rem;">Estimated Annual Breach
+              Loss Avoidance</div>
+          </div>
+          <div class="calc-metric-card">
+            <div id="roi-risk-drop" class="calc-metric-number text-cyan">78.4%</div>
+            <div style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.5rem;">Average Click-Rate
+              Reduction</div>
+          </div>
+          <div class="calc-metric-card">
+            <div id="roi-hours-saved" class="calc-metric-number text-amber">700 hrs</div>
+            <div style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.5rem;">Annual Admin Hours Saved
+            </div>
+          </div>
+          <div class="calc-metric-card">
+            <div class="calc-metric-number" style="color: var(--accent-purple);">100%</div>
+            <div style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.5rem;">NIST & ISO 27001 Audit
+              Readiness</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Proof & Gartner Verification Bar -->
+  <section class="section" style="border-top: 1px solid var(--border-subtle); padding: 4rem 0;">
+    <div class="container text-center">
+      <div
+        style="display: flex; align-items: center; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-bottom: 2.5rem;">
+        <span
+          style="font-size: 0.85rem; font-family: var(--font-mono); color: var(--text-muted); text-transform: uppercase;">Recognized
+          in Gartner Peer Insights™:</span>
+        <span style="font-weight: 700; color: #fff;">4.8 / 5.0 Rating</span>
+        <span style="color: var(--border-medium);">|</span>
+        <span style="font-size: 0.85rem; color: var(--text-secondary);">"ZiSoft's AI adaptive campaigns reduced our
+          enterprise phishing incidents within 60 days."</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Corporate Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-wrap">
+            <div class="logo-symbol">Z</div>
+            <span class="logo-text">ZINAD</span>
+          </div>
+          <p>
+            Global leader in Cybersecurity Awareness, Human Threat Intelligence, and Offensive Red Teaming simulations
+            since 2014.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Solutions</h4>
+          <ul class="footer-links">
+            <li><a href="product-zisoft.html">ZiSoft Threat Intel</a></li>
+            <li><a href="zi-games-page.html">ZIGAMES VR & WebGL</a></li>
+            <li><a href="products-cybersecurity-awarness-campaigns.html">Red Team Campaigns</a></li>
+            <li><a href="product-css.html">CSS Crowdsourced Pentest</a></li>
+            <li><a href="product-evenue.html">Evenue Event Platform</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Platform</h4>
+          <ul class="footer-links">
+            <li><a href="all-products.html">Platform Architecture</a></li>
+            <li><a href="index.html#interactive-sandbox">Phishing Sandbox</a></li>
+            <li><a href="index.html#roi-calc">ROI Calculator</a></li>
+            <li><a href="product-zisoft.html#soar-hooks">ReflexAware 360</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Research & Accreditations</h4>
+          <ul class="footer-links">
+            <li><a href="product-css.html#zero-days">Zero-Day CVE Disclosures</a></li>
+            <li><a href="all-products.html#gartner">Gartner Peer Reviews</a></li>
+            <li><a href="all-products.html#compliance">SOC 2 & ISO 27001</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Get Started</h4>
+          <ul class="footer-links">
+            <li><a href="#" class="trigger-demo-modal" style="color: var(--accent-crimson); font-weight: 600;">Book
+                Enterprise Demo ❯</a></li>
+            <li><a href="mailto:contact@zinad.net">contact@zinad.net</a></li>
+            <li><a href="tel:+19172972087">+1 (917) 297-2087</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 ZINAD Security Systems. All rights reserved. Operating across the US and 20+ countries.</div>
+        <div class="status-pill">
+          <span class="hero-pill-status"></span>
+          <span>Telemetry Network: Online (Latency: 28ms)</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactive Demo Booking Modal Drawer -->
+  <div id="demo-modal"
+    style="display: none; position: fixed; inset: 0; background: rgba(7, 9, 14, 0.85); backdrop-filter: blur(12px); z-index: 2000; align-items: center; justify-content: center; padding: 1.5rem;">
+    <div class="glass-panel" style="max-width: 540px; width: 100%; padding: 2.5rem; position: relative;">
+      <button class="close-modal"
+        style="position: absolute; top: 1.25rem; right: 1.25rem; color: #94a3b8; font-size: 1.5rem;">✕</button>
+      <h3 style="font-size: 1.6rem; margin-bottom: 0.5rem;">Schedule Architecture Demo</h3>
+      <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.75rem;">
+        Speak directly with a Senior Cybersecurity Architect. Tour ZiSoft live and review your organization's custom
+        threat profile.
+      </p>
+
+      <form
+        onsubmit="event.preventDefault(); alert('Demo request submitted successfully! A Senior Security Architect will contact your work email within 4 business hours.'); document.getElementById('demo-modal').style.display='none';">
+        <div style="margin-bottom: 1.25rem;">
+          <label
+            style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.4rem; color: #cbd5e1;">Corporate
+            Work Email</label>
+          <input type="email" required placeholder="ciso@enterprise.com"
+            style="width: 100%; padding: 0.8rem 1rem; background: var(--bg-dark-elevated); border: 1px solid var(--border-medium); border-radius: var(--radius-md); color: #fff; outline: none;">
+        </div>
+
+        <div style="margin-bottom: 1.25rem;">
+          <label
+            style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.4rem; color: #cbd5e1;">Organization
+            Headcount</label>
+          <select
+            style="width: 100%; padding: 0.8rem 1rem; background: var(--bg-dark-elevated); border: 1px solid var(--border-medium); border-radius: var(--radius-md); color: #fff; outline: none;">
+            <option>100 - 500 Employees</option>
+            <option selected>500 - 2,500 Employees</option>
+            <option>2,500 - 10,000 Employees</option>
+            <option>10,000+ Enterprise</option>
+          </select>
+        </div>
+
+        <div style="margin-bottom: 1.75rem;">
+          <label
+            style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.4rem; color: #cbd5e1;">Primary
+            Area of Interest</label>
+          <select
+            style="width: 100%; padding: 0.8rem 1rem; background: var(--bg-dark-elevated); border: 1px solid var(--border-medium); border-radius: var(--radius-md); color: #fff; outline: none;">
+            <option>ZiSoft AI Phishing & LMS</option>
+            <option>ReflexAware 360 SOAR Integration</option>
+            <option>ZIGAMES VR Experiential Scenarios</option>
+            <option>Elite Red Teaming Social Engineering</option>
+            <option>Complete Enterprise Defense Suite</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.9rem;">
+          Confirm & Schedule Session
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Local Scripts -->
+  <script src="assets/js/three.min.js"></script>
+  <script src="assets/js/confetti.min.js"></script>
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+
+</html>

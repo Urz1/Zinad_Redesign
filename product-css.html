@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS: Crowdsourced Pentesting & Vulnerability Research | ZINAD</title>
+  <meta name="description" content="ZINAD Crowdsourced Security Services (CSS): Continuous penetration testing, managed bug bounties, and zero-day research with a guaranteed 4-hour triage SLA.">
+  <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/index.css">
+</head>
+<body>
+
+  <!-- Sticky Enterprise Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="logo-wrap">
+        <div class="logo-symbol">Z</div>
+        <div>
+          <span class="logo-text">ZINAD</span>
+          <span class="logo-tagline">Human Threat Intelligence</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="all-products.html" class="nav-link">Platform Architecture <span class="nav-badge">Stack</span></a></li>
+          <li><a href="product-zisoft.html" class="nav-link">ZiSoft AI</a></li>
+          <li><a href="zi-games-page.html" class="nav-link">ZIGAMES VR</a></li>
+          <li><a href="products-cybersecurity-awarness-campaigns.html" class="nav-link">Red Teaming</a></li>
+          <li><a href="product-css.html" class="nav-link active">CSS Pentest</a></li>
+          <li><a href="product-evenue.html" class="nav-link">Evenue Summit</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn btn-primary trigger-demo-modal">Book Live Demo</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Header -->
+  <section class="section" style="padding-bottom: 3.5rem;">
+    <div class="container text-center">
+      <div class="section-tag" style="background: rgba(16, 185, 129, 0.15); color: var(--accent-emerald);">
+        Crowdsourced Offensive Security
+      </div>
+      <h1 class="hero-title" style="max-width: 960px; margin: 0 auto 1.5rem;">
+        Continuous Attack Surface Pentesting & <span class="text-gradient">Managed Bug Bounties.</span>
+      </h1>
+      <p class="section-subtitle" style="max-width: 760px; margin: 0 auto 2.5rem;">
+        Harness an elite, vetted collective of offensive researchers. Rapid vulnerability discovery with a guaranteed 4-hour human triage SLA and native Jira / GitLab integration.
+      </p>
+
+      <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+        <button class="btn btn-primary trigger-demo-modal">Scope Enterprise Pentest</button>
+        <button class="btn btn-secondary" onclick="document.getElementById('toggle-mode').scrollIntoView({behavior:'smooth'})">Explore Researcher Hub ❯</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Research & Zero-Day Feed -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="glass-panel" style="padding: 2.5rem; background: #07090e; border: 1px solid var(--border-subtle); margin-bottom: 4rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-subtle); padding-bottom: 1rem; margin-bottom: 1.5rem;">
+          <div style="display: flex; align-items: center; gap: 0.75rem;">
+            <span class="hero-pill-status"></span>
+            <span style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent-cyan);">ZINAD RESEARCH LABS: DISCLOSURE TELEMETRY</span>
+          </div>
+          <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-emerald);">TRIAGE SLA: &lt; 4 HOURS</span>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;">
+          <!-- Disclosed CVE 1 -->
+          <div style="background: var(--bg-dark-elevated); padding: 1.25rem; border-radius: var(--radius-sm); border-left: 3px solid var(--accent-crimson);">
+            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-crimson);">CRITICAL CVE DISCLOSURE</div>
+            <h4 style="font-size: 1.05rem; margin: 0.35rem 0;">React2Shell (CVE-2025–55182)</h4>
+            <p style="font-size: 0.82rem; color: var(--text-muted);">
+              Full remote code execution via serialized prototype pollution in React Server Components discovered by ZINAD engineers.
+            </p>
+          </div>
+
+          <!-- Disclosed CVE 2 -->
+          <div style="background: var(--bg-dark-elevated); padding: 1.25rem; border-radius: var(--radius-sm); border-left: 3px solid var(--accent-amber);">
+            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-amber);">META BUG BOUNTY AWARD</div>
+            <h4 style="font-size: 1.05rem; margin: 0.35rem 0;">Meta Spark AR Remote Execution</h4>
+            <p style="font-size: 0.82rem; color: var(--text-muted);">
+              RCE vulnerability chain in Spark AR lifecycle scripts reported and responsibly patched with Meta Security.
+            </p>
+          </div>
+
+          <!-- Disclosed CVE 3 -->
+          <div style="background: var(--bg-dark-elevated); padding: 1.25rem; border-radius: var(--radius-sm); border-left: 3px solid var(--accent-cyan);">
+            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-cyan);">KERNEL DAEMON FUZZING</div>
+            <h4 style="font-size: 1.05rem; margin: 0.35rem 0;">Netconsd Symbolic Fuzzing Trilogy</h4>
+            <p style="font-size: 0.82rem; color: var(--text-muted);">
+              3-part technical series demonstrating memory leak and buffer boundary discovery in Linux network consoles.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dual Persona Toggle -->
+      <div id="toggle-mode" class="section-header">
+        <span class="section-tag">Platform Perspectives</span>
+        <h2 class="section-title">Two Dedicated Portals. One Platform.</h2>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem;">
+        <!-- For Organizations -->
+        <div class="glass-panel" style="padding: 2.5rem; border-top: 4px solid var(--accent-crimson);">
+          <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-crimson); text-transform: uppercase;">For CISOs & DevSecOps Teams</span>
+          <h3 style="font-size: 1.6rem; margin: 0.5rem 0 1rem;">Managed Pentesting as a Service</h3>
+          <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6; margin-bottom: 1.5rem;">
+            Continuous penetration testing on web apps, mobile APIs, and cloud infrastructure. Verified triage team eliminates false positives before creating Jira tickets.
+          </p>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.9rem; color: #cbd5e1; margin-bottom: 2rem;">
+            <li>✓ Certified offensive experts (OSCP, OSEE, OSCE3)</li>
+            <li>✓ Bi-directional Jira, GitHub, and Slack integrations</li>
+            <li>✓ Compliance-ready SOC 2 & ISO 27001 pentest reports</li>
+          </ul>
+          <button class="btn btn-primary trigger-demo-modal" style="width: 100%;">Scope Organizational Pentest</button>
+        </div>
+
+        <!-- For Security Researchers -->
+        <div class="glass-panel" style="padding: 2.5rem; border-top: 4px solid var(--accent-emerald);">
+          <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-emerald); text-transform: uppercase;">For Ethical Hackers & Researchers</span>
+          <h3 style="font-size: 1.6rem; margin: 0.5rem 0 1rem;">Global Bounty Network (ZiLink)</h3>
+          <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6; margin-bottom: 1.5rem;">
+            Access private enterprise bug bounty programs with clear Rules of Engagement, legal safe-harbor protection, and guaranteed rapid bounty disbursements.
+          </p>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.9rem; color: #cbd5e1; margin-bottom: 2rem;">
+            <li>✓ Standardized CVSS 3.1 transparent payout tiers</li>
+            <li>✓ Sub-4-hour triage validation by senior researchers</li>
+            <li>✓ Exclusive invitations to private enterprise targets</li>
+          </ul>
+          <button class="btn btn-secondary" style="width: 100%;" onclick="alert('Researcher applications open for Q4 2026 cohort! Apply at researchers@zinad.net')">Apply as Ethical Hacker</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Corporate Site Footer -->
+  <footer class="site-footer">
+    <div class="container text-center">
+      <p style="font-size: 0.9rem; color: var(--text-muted);">
+        © 2026 ZINAD Security Systems. All platform modules are ISO 27001:2022, SOC 2 Type II, and GDPR compliant.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
