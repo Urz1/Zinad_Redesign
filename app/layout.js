@@ -33,7 +33,14 @@ export const metadata = {
   description: 'ZINAD transforms employees into active cyber sensors with AI-powered phishing simulations, real-time SOAR incident integration, and immersive VR training.',
   keywords: 'cybersecurity awareness, human threat intelligence, phishing simulation, SOAR, Red Teaming, VR training, ReflexAware 360',
   icons: {
-    icon: '/assets/images/zinad_emblem.png',
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/assets/images/zinad_emblem.png', type: 'image/png', sizes: '512x512' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+    shortcut: '/favicon.ico',
   },
 };
 

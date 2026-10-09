@@ -22,32 +22,22 @@ export default function ZinadLogo({ size = 'default', showSlogan = true }) {
       <div 
         className="zinad-emblem-wrap" 
         style={{
-          width: isCompact ? '20px' : '25px',
-          height: isCompact ? '32px' : '40px',
+          width: isCompact ? '28px' : '36px',
+          height: isCompact ? '28px' : '36px',
         }}
       >
         {/* Defensive Shockwave Pulse Ring (Fires on lock) */}
         <div className="zinad-lock-shockwave" aria-hidden="true" />
 
-        {/* Dynamic Padlock Shackle (Top Arch) */}
-        <div className="zinad-emblem-shackle" aria-hidden="true">
+        {/* 3D Volumetric ZINAD Master Shield Emblem */}
+        <div className="zinad-emblem-render" aria-hidden="true">
           <img
-            src="/assets/images/emblem_shackle.png"
-            alt=""
-            width={isCompact ? 20 : 25}
-            height={isCompact ? 9 : 12}
-            style={{ width: '100%', height: '100%', display: 'block', objectFit: 'fill' }}
-          />
-        </div>
-
-        {/* Shield Body with dynamic "Z" ribbon */}
-        <div className="zinad-emblem-body" aria-hidden="true">
-          <img
-            src="/assets/images/emblem_body.png"
-            alt=""
-            width={isCompact ? 20 : 25}
-            height={isCompact ? 23 : 28}
-            style={{ width: '100%', height: '100%', display: 'block', objectFit: 'fill' }}
+            src="/assets/images/zinad_emblem.png"
+            srcSet="/assets/images/zinad_emblem.png 1x, /assets/images/zinad_emblem_3d.png 2x"
+            alt="ZINAD Shield"
+            width={isCompact ? 28 : 36}
+            height={isCompact ? 28 : 36}
+            className="zinad-emblem-img"
           />
           {/* Cyber Telemetry Sheen Overlay */}
           <div className="zinad-sheen-slider" />

@@ -572,23 +572,26 @@ h1, h2, h3, h4, h5, h6 {
 .zinad-emblem-wrap {
   position: relative;
   flex-shrink: 0;
-  display: block;
-  filter: drop-shadow(0 2px 10px rgba(190, 30, 45, 0.35));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 2px 10px rgba(225, 29, 72, 0.42));
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), filter 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Defensive Radial Shockwave upon Lock */
 .zinad-lock-shockwave {
   position: absolute;
-  top: 28%;
+  top: 50%;
   left: 50%;
-  width: 6px;
-  height: 6px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   border: 1.5px solid var(--accent-crimson);
   transform: translate(-50%, -50%) scale(0.2);
   opacity: 0;
   pointer-events: none;
+  z-index: 0;
 }
 
 .zinad-logo-brand.is-locked .zinad-lock-shockwave {
@@ -599,54 +602,36 @@ h1, h2, h3, h4, h5, h6 {
   0% {
     transform: translate(-50%, -50%) scale(0.2);
     opacity: 0.95;
-    box-shadow: 0 0 10px var(--accent-crimson);
+    box-shadow: 0 0 12px var(--accent-crimson);
   }
   100% {
-    transform: translate(-50%, -50%) scale(4.8);
+    transform: translate(-50%, -50%) scale(4.5);
     opacity: 0;
-    box-shadow: 0 0 20px transparent;
+    box-shadow: 0 0 24px transparent;
   }
 }
 
-/* Padlock Shackle (Top Arch) */
-.zinad-emblem-shackle {
-  position: absolute;
-  top: 0;
-  left: 0;
+/* 3D Volumetric Shield Render Container */
+.zinad-emblem-render {
+  position: relative;
   width: 100%;
-  height: 29.41%;
-  z-index: 2;
-  transform: translateY(-3.5px);
-  transition: transform 0.48s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-.zinad-logo-brand.is-locked .zinad-emblem-shackle {
-  transform: translateY(0);
-}
-
-/* Hover Micro-Recoil on Shackle */
-.logo-wrap:hover .zinad-emblem-shackle,
-.zinad-logo-brand:hover .zinad-emblem-shackle {
-  animation: shackleTactileLock 0.45s cubic-bezier(0.25, 1, 0.5, 1);
-}
-
-@keyframes shackleTactileLock {
-  0% { transform: translateY(0); }
-  30% { transform: translateY(-3px); }
-  65% { transform: translateY(0.8px); }
-  100% { transform: translateY(0); }
-}
-
-/* Shield Body with dynamic "Z" ribbon */
-.zinad-emblem-body {
-  position: absolute;
-  top: 29.41%;
-  left: 0;
-  width: 100%;
-  height: 70.59%;
+  height: 100%;
   z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
-  border-radius: 1px;
+  border-radius: 4px;
+}
+
+.zinad-emblem-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  user-select: none;
+  -webkit-user-drag: none;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Cyber Telemetry Sheen Overlay */
@@ -659,14 +644,15 @@ h1, h2, h3, h4, h5, h6 {
   background: linear-gradient(
     115deg, 
     transparent 0%, 
-    rgba(255, 255, 255, 0.3) 30%, 
-    rgba(255, 255, 255, 0.95) 50%, 
-    rgba(255, 255, 255, 0.3) 70%, 
+    rgba(255, 255, 255, 0.25) 30%, 
+    rgba(255, 255, 255, 0.85) 50%, 
+    rgba(255, 255, 255, 0.25) 70%, 
     transparent 100%
   );
   transform: rotate(28deg);
   pointer-events: none;
   opacity: 0;
+  mix-blend-mode: overlay;
   animation: ambientTelemetrySheen 12s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 
@@ -689,11 +675,16 @@ h1, h2, h3, h4, h5, h6 {
   100% { left: 190%; opacity: 0; }
 }
 
-/* Hover Glow & Scale on Emblem */
+/* Hover Lift & 3D Glow on Emblem */
 .logo-wrap:hover .zinad-emblem-wrap,
 .zinad-logo-brand:hover .zinad-emblem-wrap {
-  transform: scale(1.06);
-  filter: drop-shadow(0 0 16px rgba(190, 30, 45, 0.8)) drop-shadow(0 4px 14px rgba(190, 30, 45, 0.45));
+  transform: translateY(-1.5px) scale(1.08);
+  filter: drop-shadow(0 0 16px rgba(225, 29, 72, 0.75)) drop-shadow(0 4px 14px rgba(190, 30, 45, 0.45));
+}
+
+.logo-wrap:active .zinad-emblem-wrap,
+.zinad-logo-brand:active .zinad-emblem-wrap {
+  transform: translateY(0) scale(0.96);
 }
 
 /* Brand Typography */
@@ -748,16 +739,14 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Accessibility: Respect Reduced Motion Preferences */
 @media (prefers-reduced-motion: reduce) {
-  .zinad-emblem-shackle {
-    transform: translateY(0) !important;
-    transition: none !important;
-  }
   .zinad-lock-shockwave,
   .zinad-sheen-slider {
     display: none !important;
     animation: none !important;
   }
-  .zinad-emblem-wrap {
+  .zinad-emblem-wrap,
+  .zinad-emblem-img {
+    transform: none !important;
     transition: none !important;
   }
 }
